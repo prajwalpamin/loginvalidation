@@ -4,7 +4,10 @@ const port=8080;
 const mongoose=require("mongoose");
 const dotenv=require("dotenv");
 const userRoutes=require("./routes/userRoutes");
+const cors=require("cors")
 
+
+app.use(cors())
 dotenv.config();
 
 app.use(express.json());
